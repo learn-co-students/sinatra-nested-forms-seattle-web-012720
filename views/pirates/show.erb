@@ -1,7 +1,10 @@
 <h1>Display your Pirate here</h1>
+<p>Pirate <%=@pirate.name%> weighs <%=@pirate.weight%> pounds
+and is <%=@pirate.height%> tall.</p>
 
 
-<h2>Display your first ship here</h2>
-
-
-<h2>Display your second ship here</h2>
+<% @ships.each_with_index do |ship, i| %>
+    <h2>Ship <%= i+1 %> </h2>
+    <p> <%=ship.name%> is a <%=ship.type%>
+    with <%=ship.booty%> </p>
+<% end %>
